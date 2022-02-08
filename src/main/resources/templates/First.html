@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+
+
+<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1> Welecome</h1><hr> <br>
+
+<h1 th:text="${message}"></h1>
+
+<div class="container">
+  <form action="" method="post">
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Api Key</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="apikey" name="apikey" placeholder="apikey.." required="required">
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Wallet Id</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="walletId" name="walletId" placeholder="walletId.." required="required">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Blockchain</label>
+      </div>
+      <div class="col-75">
+        <select id="blockchain" name="blockchain" required="required">
+			<option value="dogecoin">Dogecoin</option>
+			<option value="bitcoin">Bitcoin</option>			
+          </select>
+      </div>
+    </div>
+    
+    
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Network</label>
+      </div>
+      <div class="col-75">
+        <select id="network" name="network" required="required">
+			<option value="mainnet">mainnet</option>
+			<option value="testnet">testnet</option>
+          </select>
+      </div>
+    </div>
+    
+    <br>
+    <hr>
+    
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Address</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="address" name="address" placeholder="Adress.." required="required">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Amount</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="amount" name="amount" placeholder="amount.." required="required">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Priority</label>
+      </div>
+      <div class="col-75">
+        <select id="feePriority" name="feePriority" required="required">
+			<option value="slow">slow</option>
+			<option value="standard">standard</option>
+			<option value="fast">fast</option>
+          </select>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Strategy</label>
+      </div>
+      <div class="col-75">
+        <select id="prepareStrategy" name="prepareStrategy" required="required">
+			<option value="minimize-dust">minimize-dust</option>
+			<option value="standard">optimize-size</option>
+          </select>
+      </div>
+    </div>
+    <br>
+<hr>
+<p> Not Important </p>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Callback Url</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="callbackUrl" name="callbackUrl" placeholder="callbackUrl.." >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Callback Secret Key</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="callbackSecretKey" name="callbackSecretKey" placeholder="callbackSecretKey .." >
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Note</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="note" name="note" placeholder="note..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Context</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="context" name="context" placeholder="context.." >
+      </div>
+    </div>
+
+    
+    <div class="row"> <div class="col-25"> </div> </div>
+    
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+
+
+</body>
+</html>
