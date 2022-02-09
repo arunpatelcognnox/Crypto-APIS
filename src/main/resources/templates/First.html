@@ -85,7 +85,7 @@ input[type=submit]:hover {
         <label for="fname">Api Key</label>
       </div>
       <div class="col-75">
-        <input type="text" id="apikey" name="apikey" placeholder="apikey.." required="required">
+        <input type="text" th:value="${order.apikey}" id="apikey" name="apikey" placeholder="apikey.." required="required">
       </div>
     </div>
     
@@ -95,7 +95,7 @@ input[type=submit]:hover {
         <label for="fname">Wallet Id</label>
       </div>
       <div class="col-75">
-        <input type="text" id="walletId" name="walletId" placeholder="walletId.." required="required">
+        <input type="text" th:value="${order.walletId}" id="walletId" name="walletId" placeholder="walletId.." required="required">
       </div>
     </div>
     
@@ -104,7 +104,7 @@ input[type=submit]:hover {
         <label for="country">Blockchain</label>
       </div>
       <div class="col-75">
-        <select id="blockchain" name="blockchain" required="required">
+        <select id="blockchain" th:value="${order.blockchain}" name="blockchain" required="required">
 			<option value="dogecoin">Dogecoin</option>
 			<option value="bitcoin">Bitcoin</option>			
           </select>
@@ -118,7 +118,7 @@ input[type=submit]:hover {
         <label for="country">Network</label>
       </div>
       <div class="col-75">
-        <select id="network" name="network" required="required">
+        <select id="network" th:value="${order.network}" name="network" required="required">
 			<option value="mainnet">mainnet</option>
 			<option value="testnet">testnet</option>
           </select>
@@ -134,7 +134,7 @@ input[type=submit]:hover {
         <label for="fname">Address</label>
       </div>
       <div class="col-75">
-        <input type="text" id="address" name="address" placeholder="Adress.." required="required">
+        <input type="text" th:value="${order.address}" id="address" name="address" placeholder="Adress.." required="required">
       </div>
     </div>
     
@@ -143,7 +143,7 @@ input[type=submit]:hover {
         <label for="lname">Amount</label>
       </div>
       <div class="col-75">
-        <input type="text" id="amount" name="amount" placeholder="amount.." required="required">
+        <input type="text" id="amount" th:value="${order.amount}" name="amount" placeholder="amount.." required="required">
       </div>
     </div>
     
@@ -152,7 +152,7 @@ input[type=submit]:hover {
         <label for="country">Priority</label>
       </div>
       <div class="col-75">
-        <select id="feePriority" name="feePriority" required="required">
+        <select id="feePriority" name="feePriority" th:value="${order.feePriority}" required="required">
 			<option value="slow">slow</option>
 			<option value="standard">standard</option>
 			<option value="fast">fast</option>
@@ -165,7 +165,7 @@ input[type=submit]:hover {
         <label for="country">Strategy</label>
       </div>
       <div class="col-75">
-        <select id="prepareStrategy" name="prepareStrategy" required="required">
+        <select id="prepareStrategy" name="prepareStrategy" th:value="${order.prepareStrategy}" required="required">
 			<option value="minimize-dust">minimize-dust</option>
 			<option value="standard">optimize-size</option>
           </select>
@@ -179,7 +179,7 @@ input[type=submit]:hover {
         <label for="lname">Callback Url</label>
       </div>
       <div class="col-75">
-        <input type="text" id="callbackUrl" name="callbackUrl" placeholder="callbackUrl.." >
+        <input type="text" id="callbackUrl" th:value="${order.callbackUrl}" name="callbackUrl" placeholder="callbackUrl.." >
       </div>
     </div>
 
@@ -188,7 +188,7 @@ input[type=submit]:hover {
         <label for="lname">Callback Secret Key</label>
       </div>
       <div class="col-75">
-        <input type="text" id="callbackSecretKey" name="callbackSecretKey" placeholder="callbackSecretKey .." >
+        <input type="text" id="callbackSecretKey" th:value="${order.callbackSecretKey}" name="callbackSecretKey" placeholder="callbackSecretKey .." >
       </div>
     </div>
     
@@ -197,7 +197,7 @@ input[type=submit]:hover {
         <label for="lname">Note</label>
       </div>
       <div class="col-75">
-        <input type="text" id="note" name="note" placeholder="note..">
+        <input type="text" id="note" name="note" th:value="${order.note}" placeholder="note..">
       </div>
     </div>
 
@@ -206,7 +206,7 @@ input[type=submit]:hover {
         <label for="lname">Context</label>
       </div>
       <div class="col-75">
-        <input type="text" id="context" name="context" placeholder="context.." >
+        <input type="text" id="context" name="context" th:value="${order.context}" placeholder="context.." >
       </div>
     </div>
 
